@@ -48,3 +48,60 @@ def menu():
     print('\topcion 1 usar el computador')
     print('\topcion 2 redes sociales')
     print('\topcion 3 salir')
+
+while True:
+    menu()
+
+    opcionMenu = input("Inserta un numero valor >>")
+
+    if opcionMenu == '1':
+        os.system('cls')
+        print('Usar el computador')
+        print('\topcion 1 trabajar')
+        print('\topcion 2 entretenimiento')
+        print('\topcion 3 jugar')
+
+        opcionComputador = input("Inserta un numero valor >>")
+
+        if opcionComputador == "1":
+            listaProgramas = []
+            listaProgramas = os.listdir(ruta + "\programas")
+
+            print("¿Qué programa decea abrir?")
+            print(listaProgramas)
+            programaSeleccionada = input('>>')
+
+            os.system(ruta + "\programas\\" + programaSeleccionada)
+
+        elif opcionComputador == "2":
+            listaMusica = []
+            listaMusica = os.listdir(ruta + "\entretenimiento")
+
+            print("¿Qué archivo decea reproducir?")
+            print(listaMusica)
+            musicaSeleccionada = input('>>')
+
+            os.system(ruta + "\entretenimiento\\" + musicaSeleccionada)
+
+        elif opcionComputador == "3":
+            listaJuegos = []
+            listaJuegos = os.listdir(ruta + "\juegos")
+
+            print("¿Qué juego quiere abrir?")
+            print(listaJuegos)
+            juegoSeleccionado = input('>>')
+
+            os.system(ruta + "\juegos\\" + juegoSeleccionado)
+
+        else:
+            print("Opcion Invalida")
+            input("\npulsa una tecla para continuar >>")
+
+    elif opcionMenu == "2":
+        redSocial()
+
+    elif opcionMenu == "3":
+        break
+
+    else:
+        input("\npulsa una tecla para continuar")
