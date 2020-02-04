@@ -32,3 +32,19 @@ def redSocial():
         "//div[contains(@class,'public-DraftStyleDefault-block public-DraftStyleDefault-ltr')]").click()
 
     keyboard.write('HOLA MENSAJE AUTOMATIZADO')
+
+    for i in [0, 1]:
+        press('TAB')
+
+    time.sleep(2)
+    press('ENTER')
+
+    time.sleep(2)
+    driver.quit()
+
+def menu():
+    os.system('cls')
+    print('Selecionar una opcion')
+    print('\topcion 1 usar el computador')
+    print('\topcion 2 redes sociales')
+    print('\topcion 3 salir')
