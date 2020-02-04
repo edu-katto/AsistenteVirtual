@@ -13,28 +13,28 @@ ruta = os.getcwd() + "\menu"
 def redSocial():
     driver = webdriver.Firefox(executable_path=r'C:\webdrivers\geckodriver.exe')
 
-    driver.get('https://twitter.com/login')
+    driver.get('https://www.facebook.com/login')
     time.sleep(2)
 
-    driver.find_element_by_name("session[username_or_email]").send_keys("3023084384")
+    driver.find_element_by_id("email").send_keys("froncallo@uniguajira.edu.co")
     time.sleep(1)
 
-    driver.find_element_by_name("session[password]").send_keys("moises99")
+    driver.find_element_by_id("pass").send_keys("fabian")
     time.sleep(1)
 
-    driver.find_element_by_xpath("//div[@dir='auto'][contains(.,'Iniciar sesión')]").click()
+    driver.find_element_by_id("loginbutton").click()
     time.sleep(2)
 
-    driver.get("https://twitter.com/messages/828818614513958912-1220748337516896256?text=")
+    driver.get("https://www.facebook.com/messages/t/fabian.roncallo")
     time.sleep(2)
 
-    mensaje = driver.find_element_by_xpath(
-        "//div[contains(@class,'public-DraftStyleDefault-block public-DraftStyleDefault-ltr')]").click()
-
+    mensaje = driver.find_element_by_xpath("//div[contains(@class,'_1mf _1mj')]").click()
     keyboard.write('HOLA MENSAJE AUTOMATIZADO')
+    time.sleep(3)
 
-    for i in [0, 1]:
-        press('TAB')
+    press('TAB')
+    time.sleep(3)
+    press('TAB')
 
     time.sleep(2)
     press('ENTER')
